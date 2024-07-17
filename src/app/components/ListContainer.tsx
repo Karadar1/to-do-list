@@ -1,17 +1,13 @@
-import React, { useState } from "react";
-import Task from "./Task";
+import React from "react";
+import Task from "./task/Task";
+import NewTask from "./new-task/NewTask";
+
 export default function ListContainer() {
-  const [isEmpty, setIsEmpty] = useState(true);
-  const [addTask, setaddTask] = useState(false);
-
-  function createTask() {
-    setaddTask(true);
-  }
-
   return (
     <>
-      {isEmpty ? <div>Empty container:</div> : <div> Components</div>}
-      <button onClick={createTask}>Create Task</button>
+      <div>ListContainer</div>;
+      <Task title="eat" color="red" timeframe="10 minutes" />
+      <NewTask />
     </>
   );
 }

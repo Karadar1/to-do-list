@@ -1,4 +1,5 @@
 import React from "react";
+import { ColoredContainer } from "./Task.styles";
 
 interface TaskProps {
   title: string;
@@ -8,16 +9,10 @@ interface TaskProps {
 
 const Task: React.FC<TaskProps> = ({ title, color, timeframe }) => {
   return (
-    <div
-      style={{
-        border: `2px solid ${color}`,
-        padding: "10px",
-        marginBottom: "10px",
-      }}
-    >
+    <ColoredContainer color={color}>
       <h3>{title}</h3>
       <p>Timeframe: {timeframe}</p>
-    </div>
+    </ColoredContainer>
   );
 };
 
